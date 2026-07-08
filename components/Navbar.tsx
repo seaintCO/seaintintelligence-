@@ -14,7 +14,7 @@ export default function Navbar({
   const es = lang === "es";
 
   return (
-    <header className="flex items-center justify-between border-b border-slate-200/80 px-6 py-7 lg:px-16">
+    <header className="flex items-center justify-between border-b border-slate-200/80 px-4 py-5 sm:px-6 lg:px-16">
       <Link href="/" className="flex items-center gap-4">
         <span className="relative h-8 w-8 shrink-0">
           <span className="absolute left-0 top-0 h-2.5 w-2.5 rounded bg-blue-700" />
@@ -23,7 +23,7 @@ export default function Navbar({
           <span className="absolute bottom-0 left-0 h-2.5 w-2.5 rounded bg-blue-700" />
           <span className="absolute bottom-0 right-0 h-2.5 w-2.5 rounded bg-blue-700" />
         </span>
-        <span className="text-2xl font-semibold tracking-[-0.04em] text-black sm:text-3xl">
+        <span className="text-lg font-semibold tracking-[-0.04em] text-black sm:text-3xl">
           SEAINT Intelligence
         </span>
       </Link>
@@ -44,7 +44,7 @@ export default function Navbar({
           {es ? "EN" : "ES"}
         </button>
 
-        <Link href="#book" className="group hidden h-12 items-center justify-center overflow-hidden rounded-[16px] bg-gradient-to-br from-[#2f6bff] via-[#2454f4] to-[#1237d8] px-5 text-[15px] font-semibold tracking-[-0.02em] text-white shadow-[0_18px_48px_rgba(37,84,244,0.38),0_0_40px_rgba(37,84,244,0.18),inset_0_1px_0_rgba(255,255,255,0.42)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_24px_60px_rgba(37,84,244,0.50),0_0_60px_rgba(37,84,244,0.25),inset_0_1px_0_rgba(255,255,255,0.50)] sm:inline-flex">
+        <Link href="https://calendly.com/seaintco/new-meeting" className="group hidden h-12 items-center justify-center overflow-hidden rounded-[16px] bg-gradient-to-br from-[#2f6bff] via-[#2454f4] to-[#1237d8] px-5 text-[15px] font-semibold tracking-[-0.02em] text-white shadow-[0_18px_48px_rgba(37,84,244,0.38),0_0_40px_rgba(37,84,244,0.18),inset_0_1px_0_rgba(255,255,255,0.42)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_24px_60px_rgba(37,84,244,0.50),0_0_60px_rgba(37,84,244,0.25),inset_0_1px_0_rgba(255,255,255,0.50)] sm:inline-flex">
           {es ? "Reservar" : "Book Now"}
         </Link>
 
@@ -55,3 +55,5 @@ export default function Navbar({
     </header>
   );
 }
+
+

@@ -24,7 +24,7 @@ export default function Stats() {
       {stats.map((item) => {
         const Icon = item.icon;
         return (
-          <a key={item.title} href="#book" className="group flex items-center justify-between gap-6 rounded-[18px] border border-slate-200 bg-white/78 p-6 shadow-[0_12px_34px_rgba(15,23,42,0.035)] backdrop-blur transition hover:-translate-y-0.5 hover:border-slate-300 hover:shadow-[0_18px_42px_rgba(15,23,42,0.06)]">
+          <a key={item.title} href="https://calendly.com/seaintco/new-meeting" className="group flex items-center justify-between gap-6 rounded-[18px] border border-slate-200 bg-white/78 p-6 shadow-[0_12px_34px_rgba(15,23,42,0.035)] backdrop-blur transition hover:-translate-y-0.5 hover:border-slate-300 hover:shadow-[0_18px_42px_rgba(15,23,42,0.06)]">
             <div className="flex min-w-0 items-center gap-5">
               <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-blue-50 text-blue-700">
                 <Icon className="h-6 w-6" />
@@ -43,3 +43,4 @@ export default function Stats() {
     </div>
   );
 }
+

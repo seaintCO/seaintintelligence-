@@ -15,7 +15,7 @@ export default function BookingSection({ lang }: { lang: Lang }) {
   return (
     <section id="book" className="relative overflow-hidden bg-white">
       <div className="mx-auto w-full max-w-[1600px] px-6 lg:px-16">
-        <div className="relative border-x border-y border-slate-200/80 px-6 py-20 sm:px-8 lg:px-16 lg:py-28">
+        <div className="relative border-x border-y border-slate-200/80 px-4 py-16 sm:px-6 sm:py-20 sm:px-8 lg:px-16 lg:py-28">
           <div className="grid items-center gap-14 lg:grid-cols-[0.92fr_1.08fr]">
             <div>
               <div className="mb-7 inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.16em] text-slate-500">
@@ -50,7 +50,7 @@ export default function BookingSection({ lang }: { lang: Lang }) {
 
               <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:gap-5">
                 <a
-                  href="mailto:hello@seaint.com"
+                  href="https://calendly.com/seaintco/new-meeting"
                   className="holo-primary group inline-flex h-14 w-full items-center justify-center overflow-hidden rounded-[18px] pl-7 pr-3 text-[16px] font-semibold tracking-[-0.02em] text-white transition-all duration-300 hover:-translate-y-0.5 sm:w-auto"
                 >
                   <span className="relative z-10 whitespace-nowrap">
@@ -91,7 +91,7 @@ export default function BookingSection({ lang }: { lang: Lang }) {
               </div>
             </div>
 
-            <div className="relative min-h-[480px] overflow-hidden">
+            <div className="relative min-h-[480px] max-sm:min-h-[390px] overflow-hidden">
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(37,99,235,0.12),transparent_42%)]" />
               <div className="absolute inset-0 bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:28px_28px] opacity-70" />
               <div className="absolute left-1/2 top-1/2 h-px w-full -translate-x-1/2 bg-gradient-to-r from-transparent via-blue-200 to-transparent" />
@@ -130,3 +130,5 @@ export default function BookingSection({ lang }: { lang: Lang }) {
     </section>
   );
 }
+
+

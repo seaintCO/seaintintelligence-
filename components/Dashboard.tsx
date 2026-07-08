@@ -39,7 +39,7 @@ export default function Dashboard({ lang }: { lang: Lang }) {
       ];
 
   return (
-    <div className="relative mx-auto h-[620px] w-full max-w-[760px]">
+    <div className="relative mx-auto h-[620px] max-sm:h-[560px] w-full max-w-[760px]">
       <div className="absolute right-[2%] top-[17%] h-[360px] w-[360px] rounded-full bg-blue-600/10 blur-3xl" />
 
       <div className="hyperglass absolute left-0 top-[8%] w-[88%] overflow-hidden rounded-[22px] border border-white/70 bg-white/60 backdrop-blur-2xl transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_40px_110px_rgba(37,99,235,0.18)]">
@@ -141,7 +141,7 @@ export default function Dashboard({ lang }: { lang: Lang }) {
         </div>
       </div>
 
-      <div className="blue-card absolute bottom-[11%] right-0 w-[360px] max-w-[72%] rounded-[20px] border border-blue-300/30 bg-[radial-gradient(circle_at_90%_20%,rgba(96,165,250,0.85),transparent_16%),linear-gradient(135deg,#0b2da8_0%,#071855_56%,#0c37c8_100%)] p-6 text-white backdrop-blur-2xl transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_45px_100px_rgba(37,99,235,0.35)]">
+      <div className="blue-card absolute bottom-[11%] right-0 w-[360px] max-w-[72%] max-sm:w-[280px] max-sm:max-w-[82%] rounded-[20px] border border-blue-300/30 bg-[radial-gradient(circle_at_90%_20%,rgba(96,165,250,0.85),transparent_16%),linear-gradient(135deg,#0b2da8_0%,#071855_56%,#0c37c8_100%)] p-6 text-white backdrop-blur-2xl transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_45px_100px_rgba(37,99,235,0.35)]">
         <div className="flex items-center justify-between">
           <span className="inline-flex items-center gap-2 text-sm font-medium text-blue-50">
             <span className="flex h-4 w-4 items-center justify-center rounded-full bg-white text-blue-700">
@@ -161,7 +161,7 @@ export default function Dashboard({ lang }: { lang: Lang }) {
         </p>
       </div>
 
-      <div className="hyperglass absolute bottom-[4%] left-[8%] w-[250px] rounded-[18px] border border-white/70 bg-white/60 p-5 backdrop-blur-2xl transition hover:-translate-y-2 hover:shadow-[0_32px_80px_rgba(37,99,235,0.14)]">
+      <div className="hyperglass absolute bottom-[4%] left-[8%] w-[250px] max-sm:w-[210px] rounded-[18px] border border-white/70 bg-white/60 p-5 backdrop-blur-2xl transition hover:-translate-y-2 hover:shadow-[0_32px_80px_rgba(37,99,235,0.14)]">
         <div className="flex items-center gap-2">
           <span className="flex h-4 w-4 items-center justify-center rounded-full bg-emerald-500 text-white">
             <Check className="h-3 w-3" />
@@ -185,3 +185,4 @@ export default function Dashboard({ lang }: { lang: Lang }) {
     </div>
   );
 }
+

@@ -6,7 +6,7 @@ export default function Hero({ lang }: { lang: Lang }) {
   const es = lang === "es";
 
   return (
-    <div className="grid items-center gap-12 px-6 py-16 lg:grid-cols-[0.88fr_1.12fr] lg:px-16 lg:pb-32 lg:pt-24">
+    <div className="grid items-center gap-12 px-2 py-12 sm:px-6 lg:grid-cols-[0.88fr_1.12fr] lg:px-16 lg:pb-32 lg:pt-24">
       <div className="max-w-3xl">
         <div className="mb-7 inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.08em] text-blue-700">
           <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-blue-50">
@@ -15,7 +15,7 @@ export default function Hero({ lang }: { lang: Lang }) {
           {es ? "Software AI y Sistemas Empresariales" : "AI Software & Business Systems"}
         </div>
 
-        <h1 className="max-w-[760px] text-[3.15rem] font-semibold leading-[1.03] tracking-[-0.065em] text-black sm:text-6xl lg:text-[4.55rem] xl:text-[5.05rem]">
+        <h1 className="max-w-[760px] text-[2.55rem] font-semibold leading-[1.03] tracking-[-0.065em] text-black sm:text-6xl lg:text-[4.55rem] xl:text-[5.05rem]">
           {es ? "Sistemas inteligentes para negocios modernos." : "Intelligent systems for modern businesses."}
         </h1>
 
@@ -26,7 +26,7 @@ export default function Hero({ lang }: { lang: Lang }) {
         </p>
 
         <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:gap-5">
-          <a href="#book" className="holo-primary group inline-flex h-14 w-full items-center justify-center overflow-hidden rounded-[18px] pl-7 pr-3 text-[16px] font-semibold tracking-[-0.02em] text-white transition-all duration-300 hover:-translate-y-0.5 sm:w-auto">
+          <a href="https://calendly.com/seaintco/new-meeting" className="holo-primary group inline-flex h-14 w-full items-center justify-center overflow-hidden rounded-[18px] pl-7 pr-3 text-[16px] font-semibold tracking-[-0.02em] text-white transition-all duration-300 hover:-translate-y-0.5 sm:w-auto">
             <span className="relative z-10 whitespace-nowrap">{es ? "Reservar" : "Book Now"}</span>
             <span className="relative z-10 ml-4 inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-[14px] border border-white/20 bg-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,0.40)] backdrop-blur-md">
               <ArrowUpRight className="h-5 w-5" />
@@ -46,3 +46,5 @@ export default function Hero({ lang }: { lang: Lang }) {
     </div>
   );
 }
+
+
