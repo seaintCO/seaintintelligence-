@@ -1,0 +1,45 @@
+﻿import { ArrowRight, Bot, Globe2, Landmark, Wallet, Workflow } from "lucide-react";
+
+const stats = [
+  {
+    icon: Workflow,
+    title: "AI business systems",
+    text: "AI handles leads, calls, booking, follow-up, and customer workflows.",
+  },
+  {
+    icon: Wallet,
+    title: "Instant deployment",
+    text: "Launch websites, dashboards, agents, and automations without slow agency timelines.",
+  },
+  {
+    icon: Landmark,
+    title: "Revenue intelligence",
+    text: "Track leads, bookings, analytics, and customer activity from one intelligent system.",
+  },
+];
+
+export default function Stats() {
+  return (
+    <div id="solutions" className="grid gap-5 px-6 pb-20 pt-16 md:grid-cols-3 lg:px-16">
+      {stats.map((item) => {
+        const Icon = item.icon;
+        return (
+          <a key={item.title} href="#book" className="group flex items-center justify-between gap-6 rounded-[18px] border border-slate-200 bg-white/78 p-6 shadow-[0_12px_34px_rgba(15,23,42,0.035)] backdrop-blur transition hover:-translate-y-0.5 hover:border-slate-300 hover:shadow-[0_18px_42px_rgba(15,23,42,0.06)]">
+            <div className="flex min-w-0 items-center gap-5">
+              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-blue-50 text-blue-700">
+                <Icon className="h-6 w-6" />
+              </div>
+              <div>
+                <h3 className="text-base font-semibold text-[#06145b]">{item.title}</h3>
+                <p className="mt-2 max-w-[280px] text-sm leading-5 text-slate-500">{item.text}</p>
+              </div>
+            </div>
+            <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-slate-50 text-slate-400 transition group-hover:bg-blue-700 group-hover:text-white">
+              <ArrowRight className="h-[18px] w-[18px]" />
+            </span>
+          </a>
+        );
+      })}
+    </div>
+  );
+}
