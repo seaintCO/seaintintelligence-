@@ -25,7 +25,7 @@ export default function Hero({ lang }: { lang: Lang }) {
             >
               <span>{es ? "Reservar ahora" : "Book Now"}</span>
 
-              <span className="ml-5 inline-flex h-12 w-12 items-center justify-center rounded-[15px] border border-white/25 bg-white/15">
+              <span className="seaint-btn-icon">
                 <ArrowUpRight className="h-5 w-5" />
               </span>
             </Link>
@@ -36,7 +36,7 @@ export default function Hero({ lang }: { lang: Lang }) {
             >
               <span>{es ? "Explorar soluciones" : "Explore Solutions"}</span>
 
-              <span className="ml-5 inline-flex h-12 w-12 items-center justify-center rounded-[15px] border border-slate-200 bg-white">
+              <span className="seaint-btn-icon">
                 <ArrowUpRight className="h-5 w-5" />
               </span>
             </Link>
@@ -50,3 +50,4 @@ export default function Hero({ lang }: { lang: Lang }) {
     </section>
   );
 }
+

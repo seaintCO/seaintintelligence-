@@ -273,3 +273,376 @@ h6 {
 .systems-tomorrow-headline.reveal-soft {
   animation: none !important;
 }
+
+/* =========================================================
+   SEAINT DESIGN SYSTEM V2
+   Premium enterprise buttons and interactions
+   ========================================================= */
+
+.seaint-btn {
+  --seaint-radius: 20px;
+  --seaint-transition: 420ms cubic-bezier(0.22, 1, 0.36, 1);
+
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  display: inline-flex;
+  min-height: 64px;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+
+  padding: 0 28px;
+  border-radius: var(--seaint-radius);
+
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.025em;
+  text-align: center;
+  text-decoration: none;
+
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+
+  transition:
+    transform var(--seaint-transition),
+    box-shadow var(--seaint-transition),
+    border-color var(--seaint-transition),
+    background var(--seaint-transition),
+    color var(--seaint-transition);
+}
+
+.seaint-btn::before {
+  position: absolute;
+  inset: -2px;
+  z-index: -2;
+  content: "";
+
+  border-radius: calc(var(--seaint-radius) + 2px);
+
+  opacity: 0;
+  background:
+    conic-gradient(
+      from 180deg,
+      transparent 0deg,
+      rgba(96, 165, 250, 0.72) 55deg,
+      rgba(255, 255, 255, 0.92) 92deg,
+      rgba(59, 130, 246, 0.76) 130deg,
+      transparent 190deg,
+      transparent 360deg
+    );
+
+  filter: blur(2px);
+  transition:
+    opacity var(--seaint-transition),
+    transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.seaint-btn::after {
+  position: absolute;
+  top: -80%;
+  left: -45%;
+  z-index: -1;
+
+  width: 42%;
+  height: 260%;
+  content: "";
+
+  opacity: 0.54;
+  background:
+    linear-gradient(
+      105deg,
+      transparent,
+      rgba(255, 255, 255, 0.05) 20%,
+      rgba(255, 255, 255, 0.68) 48%,
+      rgba(255, 255, 255, 0.08) 75%,
+      transparent
+    );
+
+  transform: rotate(18deg) translateX(-180%);
+  transition:
+    transform 900ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity var(--seaint-transition);
+}
+
+.seaint-btn:hover {
+  transform: translateY(-4px) scale(1.012);
+}
+
+.seaint-btn:hover::before {
+  opacity: 0.75;
+  transform: rotate(14deg);
+}
+
+.seaint-btn:hover::after {
+  opacity: 0.82;
+  transform: rotate(18deg) translateX(440%);
+}
+
+.seaint-btn:active {
+  transform: translateY(0) scale(0.975);
+  transition-duration: 110ms;
+}
+
+.seaint-btn:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 4px rgba(255, 255, 255, 0.95),
+    0 0 0 7px rgba(37, 99, 235, 0.34),
+    0 24px 65px rgba(37, 99, 235, 0.28);
+}
+
+/* Primary button */
+
+.seaint-btn-primary {
+  border: 1px solid rgba(255, 255, 255, 0.24);
+
+  color: #ffffff;
+
+  background:
+    radial-gradient(
+      circle at 22% 0%,
+      rgba(255, 255, 255, 0.44),
+      transparent 34%
+    ),
+    linear-gradient(
+      135deg,
+      #5d8cff 0%,
+      #3268ff 27%,
+      #2454f4 56%,
+      #173ac6 100%
+    );
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.58),
+    inset 0 -1px 0 rgba(0, 20, 120, 0.22),
+    inset 0 -12px 24px rgba(0, 34, 160, 0.13),
+    0 12px 25px rgba(37, 84, 244, 0.22),
+    0 25px 65px rgba(37, 84, 244, 0.33),
+    0 0 48px rgba(72, 118, 255, 0.17);
+}
+
+.seaint-btn-primary:hover {
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.72),
+    inset 0 -1px 0 rgba(0, 20, 120, 0.2),
+    inset 0 -14px 28px rgba(0, 34, 160, 0.12),
+    0 14px 28px rgba(37, 84, 244, 0.25),
+    0 32px 82px rgba(37, 84, 244, 0.42),
+    0 0 70px rgba(72, 118, 255, 0.26);
+}
+
+/* Secondary glass button */
+
+.seaint-btn-secondary {
+  border: 1px solid rgba(191, 219, 254, 0.92);
+
+  color: #07185b;
+
+  background:
+    radial-gradient(
+      circle at 25% 0%,
+      rgba(255, 255, 255, 1),
+      transparent 45%
+    ),
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.96),
+      rgba(244, 248, 255, 0.88)
+    );
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 1),
+    inset 0 -1px 0 rgba(148, 163, 184, 0.12),
+    inset 0 -10px 24px rgba(219, 234, 254, 0.2),
+    0 12px 28px rgba(15, 23, 42, 0.05),
+    0 24px 64px rgba(37, 99, 235, 0.12);
+
+  backdrop-filter: blur(22px);
+}
+
+.seaint-btn-secondary::before {
+  background:
+    conic-gradient(
+      from 180deg,
+      transparent 0deg,
+      rgba(147, 197, 253, 0.7) 58deg,
+      rgba(255, 255, 255, 1) 90deg,
+      rgba(96, 165, 250, 0.65) 135deg,
+      transparent 195deg,
+      transparent 360deg
+    );
+}
+
+.seaint-btn-secondary:hover {
+  border-color: rgba(96, 165, 250, 0.64);
+  color: #1743c7;
+
+  background:
+    radial-gradient(
+      circle at 25% 0%,
+      rgba(255, 255, 255, 1),
+      transparent 46%
+    ),
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #eff6ff
+    );
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 1),
+    inset 0 -1px 0 rgba(59, 130, 246, 0.12),
+    inset 0 -12px 28px rgba(219, 234, 254, 0.26),
+    0 14px 32px rgba(15, 23, 42, 0.06),
+    0 30px 76px rgba(37, 99, 235, 0.19);
+}
+
+/* Button icon */
+
+.seaint-btn svg {
+  flex: 0 0 auto;
+  transition:
+    transform var(--seaint-transition),
+    filter var(--seaint-transition);
+}
+
+.seaint-btn:hover svg {
+  transform: translate(3px, -3px);
+}
+
+.seaint-btn-primary svg {
+  filter: drop-shadow(0 4px 9px rgba(255, 255, 255, 0.22));
+}
+
+.seaint-btn-icon {
+  display: inline-flex;
+  height: 48px;
+  width: 48px;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  background: rgba(255, 255, 255, 0.14);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.32),
+    0 10px 24px rgba(0, 28, 138, 0.13);
+
+  backdrop-filter: blur(14px);
+
+  transition:
+    transform var(--seaint-transition),
+    background var(--seaint-transition),
+    box-shadow var(--seaint-transition);
+}
+
+.seaint-btn:hover .seaint-btn-icon {
+  transform: translateX(3px);
+  background: rgba(255, 255, 255, 0.21);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.44),
+    0 14px 30px rgba(0, 28, 138, 0.2);
+}
+
+.seaint-btn-secondary .seaint-btn-icon {
+  border-color: rgba(203, 213, 225, 0.76);
+  color: #07185b;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 1),
+    0 10px 28px rgba(37, 99, 235, 0.09);
+}
+
+/* Existing SEAINT button classes inherit V2 styling */
+
+.holo-primary {
+  border: 1px solid rgba(255, 255, 255, 0.24) !important;
+
+  background:
+    radial-gradient(
+      circle at 22% 0%,
+      rgba(255, 255, 255, 0.42),
+      transparent 34%
+    ),
+    linear-gradient(
+      135deg,
+      #5d8cff,
+      #3268ff 28%,
+      #2454f4 58%,
+      #173ac6
+    ) !important;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.56),
+    inset 0 -12px 24px rgba(0, 34, 160, 0.13),
+    0 24px 65px rgba(37, 84, 244, 0.33) !important;
+
+  transition:
+    transform 420ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 420ms cubic-bezier(0.22, 1, 0.36, 1) !important;
+}
+
+.holo-primary:hover {
+  transform: translateY(-4px) scale(1.012);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.7),
+    inset 0 -14px 28px rgba(0, 34, 160, 0.12),
+    0 32px 82px rgba(37, 84, 244, 0.42) !important;
+}
+
+.holo-secondary {
+  border: 1px solid rgba(191, 219, 254, 0.9) !important;
+
+  color: #07185b !important;
+
+  background:
+    radial-gradient(
+      circle at 25% 0%,
+      rgba(255, 255, 255, 1),
+      transparent 45%
+    ),
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.96),
+      rgba(244, 248, 255, 0.88)
+    ) !important;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 1),
+    0 24px 64px rgba(37, 99, 235, 0.12) !important;
+}
+
+@media (max-width: 639px) {
+  .seaint-btn {
+    width: 100%;
+    min-height: 62px;
+    padding-right: 18px;
+    padding-left: 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .seaint-btn,
+  .seaint-btn::before,
+  .seaint-btn::after,
+  .seaint-btn svg,
+  .seaint-btn-icon {
+    transition: none !important;
+  }
+
+  .seaint-btn:hover,
+  .seaint-btn:active {
+    transform: none;
+  }
+
+  .seaint-btn::after {
+    display: none;
+  }
+}

@@ -52,7 +52,7 @@ export default function BookingSection({ lang }: { lang: Lang }) {
               <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:gap-5">
                 <a
                   href="https://calendly.com/seaintco/new-meeting"
-                  className="holo-primary group inline-flex h-14 w-full items-center justify-center overflow-hidden rounded-[18px] pl-7 pr-3 text-[16px] font-semibold tracking-[-0.02em] text-white transition-all duration-300 hover:-translate-y-0.5 sm:w-auto"
+                  className="seaint-btn seaint-btn-primary group inline-flex h-14 w-full items-center justify-center overflow-hidden rounded-[18px] pl-7 pr-3 text-[16px] font-semibold tracking-[-0.02em] text-white transition-all duration-300 hover:-translate-y-0.5 sm:w-auto"
                 >
                   <span className="relative z-10 whitespace-nowrap">
                     {es ? "Reservar llamada" : "Book strategy call"}
@@ -64,7 +64,7 @@ export default function BookingSection({ lang }: { lang: Lang }) {
 
                 <a
                   href="#solutions"
-                  className="holo-secondary group relative inline-flex h-14 w-full items-center justify-center overflow-hidden rounded-[18px] pl-7 pr-3 text-[16px] font-semibold tracking-[-0.02em] text-[#06145b] transition-all duration-300 hover:-translate-y-0.5 sm:w-auto"
+                  className="seaint-btn seaint-btn-secondary group relative inline-flex h-14 w-full items-center justify-center overflow-hidden rounded-[18px] pl-7 pr-3 text-[16px] font-semibold tracking-[-0.02em] text-[#06145b] transition-all duration-300 hover:-translate-y-0.5 sm:w-auto"
                 >
                   <span className="relative z-10 whitespace-nowrap">
                     {es ? "Ver soluciones" : "Explore solutions"}
@@ -131,5 +131,6 @@ export default function BookingSection({ lang }: { lang: Lang }) {
     </section>
   );
 }
+
 
 
