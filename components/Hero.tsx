@@ -16,13 +16,13 @@ export default function Hero({ lang }: { lang: Lang }) {
         </div>
 
         <h1 className="max-w-[760px] text-[2.55rem] font-semibold leading-[1.03] tracking-[-0.065em] text-black sm:text-6xl lg:text-[4.55rem] xl:text-[5.05rem] headline-shimmer">
-          {es ? "Sistemas inteligentes para negocios modernos." : "Intelligent systems for modern businesses."}
+          {es ? "Sistemas inteligentes para negocios modernos." : "Systems of Tomorrow"}
         </h1>
 
         <p className="mt-7 max-w-[590px] text-lg leading-8 text-slate-500 sm:text-xl">
           {es
             ? "SEAINT Intelligence crea empleados de AI, sitios web inteligentes, sistemas de reservas, automatizaciones, dashboards y software personalizado para negocios modernos."
-            : "SEAINT Intelligence builds AI employees, intelligent websites, booking systems, automations, dashboards, and custom software for modern businesses."}
+            : "SEAINT Intelligence builds AI employees, intelligent websites, booking systems, automations, dashboards, and custom software  "}
         </p>
 
         <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:gap-5">
@@ -46,6 +46,7 @@ export default function Hero({ lang }: { lang: Lang }) {
     </div>
   );
 }
+
 
 
 
