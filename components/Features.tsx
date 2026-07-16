@@ -1,39 +1,25 @@
-﻿"use client";
+"use client";
 
 import { ArrowRight } from "lucide-react";
+import type { Lang } from "@/app/page";
 
-const features = [
-  {
-    title: "Smart automation",
-    text: "AI handles leads, bookings, follow-ups, and repetitive work so teams can move faster.",
-    badge: "Auto Flow",
-    metric: "94%",
-    dark: false,
-  },
-  {
-    title: "Secure systems",
-    text: "Enterprise-grade systems with controls for websites, automations, agents, and dashboards.",
-    badge: "Verified",
-    metric: "Secure",
-    dark: true,
-  },
-  {
-    title: "AI employees",
-    text: "Deploy AI receptionists, chat agents, lead qualifiers, and support assistants.",
-    badge: "24/7",
-    metric: "Live",
-    dark: false,
-  },
-  {
-    title: "Business platforms",
-    text: "Websites, portals, dashboards, CRMs, booking, and analytics built into one system.",
-    badge: "Live",
-    metric: "+38%",
-    dark: true,
-  },
+const featuresEn = [
+  { title: "Smart automation", text: "AI handles leads, bookings, follow-ups, and repetitive work so teams can move faster.", badge: "Auto Flow", metric: "94%", dark: false },
+  { title: "Secure systems", text: "Enterprise-grade systems with controls for websites, automations, agents, and dashboards.", badge: "Verified", metric: "Secure", dark: true },
+  { title: "AI employees", text: "Deploy AI receptionists, chat agents, lead qualifiers, and support assistants.", badge: "24/7", metric: "Live", dark: false },
+  { title: "Business platforms", text: "Websites, portals, dashboards, CRMs, booking, and analytics built into one system.", badge: "Live", metric: "+38%", dark: true },
 ];
 
-export default function Features() {
+const featuresEs = [
+  { title: "Automatización inteligente", text: "La IA gestiona prospectos, reservas, seguimiento y trabajo repetitivo para que los equipos avancen más rápido.", badge: "Flujo automático", metric: "94%", dark: false },
+  { title: "Sistemas seguros", text: "Sistemas empresariales con controles para sitios web, automatizaciones, agentes y dashboards.", badge: "Verificado", metric: "Seguro", dark: true },
+  { title: "Empleados de IA", text: "Implementa recepcionistas de IA, agentes de chat, calificadores de prospectos y asistentes de soporte.", badge: "24/7", metric: "Activo", dark: false },
+  { title: "Plataformas empresariales", text: "Sitios web, portales, dashboards, CRM, reservas y analítica integrados en un solo sistema.", badge: "Activo", metric: "+38%", dark: true },
+];
+
+export default function Features({ lang }: { lang: Lang }) {
+  const es = lang === "es";
+  const features = es ? featuresEs : featuresEn;
   return (
     <section id="features" className="relative overflow-hidden bg-white">
       <div className="mx-auto w-full max-w-[1600px] px-6 lg:px-16">
@@ -41,17 +27,19 @@ export default function Features() {
           <div className="grid gap-8 border-y border-slate-200/80 px-6 py-16 sm:px-8 md:grid-cols-[1fr_0.72fr] md:items-end lg:px-16 lg:py-24">
             <div>
               <div className="mb-6 inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.04em] text-blue-700">
-                FEATURES
+                {es ? "FUNCIONES" : "FEATURES"}
               </div>
 
               <h2 className="max-w-[640px] text-4xl font-semibold leading-[1.05] tracking-tight text-slate-950 sm:text-5xl lg:text-6xl">
-                Everything your business needs, built to{" "}
-                <span className="text-blue-700">perform.</span>
+                {es ? "Todo lo que tu empresa necesita, creado para " : "Everything your business needs, built to "}
+                <span className="text-blue-700">{es ? "rendir." : "perform."}</span>
               </h2>
             </div>
 
             <p className="max-w-[430px] text-base leading-7 text-slate-500 md:justify-self-end">
-              Powerful AI, automation, software, and web systems that work together to help businesses operate smarter.
+              {es
+                ? "Inteligencia artificial, automatización, software y sistemas web que trabajan juntos para que las empresas operen mejor."
+                : "Powerful AI, automation, software, and web systems that work together to help businesses operate smarter."}
             </p>
           </div>
 

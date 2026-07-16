@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { Globe2, Menu } from "lucide-react";
-import type { Lang } from "@/app/page";
+import type { Lang } from "@/lib/translations";
 
 export default function Navbar({
   lang,
@@ -55,5 +55,6 @@ export default function Navbar({
     </header>
   );
 }
+
 
 

@@ -1,24 +1,20 @@
-﻿import { ArrowRight, Landmark, Wallet, Workflow } from "lucide-react";
+import { ArrowRight, Landmark, Wallet, Workflow } from "lucide-react";
+import type { Lang } from "@/app/page";
 
-const stats = [
-  {
-    icon: Workflow,
-    title: "AI business systems",
-    text: "AI handles leads, calls, booking, follow-up, and customer workflows.",
-  },
-  {
-    icon: Wallet,
-    title: "Instant deployment",
-    text: "Launch websites, dashboards, agents, and automations without slow agency timelines.",
-  },
-  {
-    icon: Landmark,
-    title: "Revenue intelligence",
-    text: "Track leads, bookings, analytics, and customer activity from one intelligent system.",
-  },
-];
+export default function Stats({ lang }: { lang: Lang }) {
+  const es = lang === "es";
+  const stats = es
+    ? [
+        { icon: Workflow, title: "Sistemas empresariales con IA", text: "La IA gestiona prospectos, llamadas, reservas, seguimiento y flujos de clientes." },
+        { icon: Wallet, title: "Implementación rápida", text: "Lanza sitios web, dashboards, agentes y automatizaciones sin procesos lentos de agencia." },
+        { icon: Landmark, title: "Inteligencia de ingresos", text: "Controla prospectos, reservas, analítica y actividad del cliente desde un solo sistema." },
+      ]
+    : [
+        { icon: Workflow, title: "AI business systems", text: "AI handles leads, calls, booking, follow-up, and customer workflows." },
+        { icon: Wallet, title: "Rapid deployment", text: "Launch websites, dashboards, agents, and automations without slow agency timelines." },
+        { icon: Landmark, title: "Revenue intelligence", text: "Track leads, bookings, analytics, and customer activity from one intelligent system." },
+      ];
 
-export default function Stats() {
   return (
     <div id="solutions" className="grid gap-5 px-6 pb-20 pt-16 md:grid-cols-3 lg:px-16">
       {stats.map((item) => {
@@ -43,5 +39,3 @@ export default function Stats() {
     </div>
   );
 }
-
-

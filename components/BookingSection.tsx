@@ -1,4 +1,4 @@
-﻿import { 
+﻿import {
   ArrowUpRight,
   Banknote,
   CalendarDays,
@@ -131,9 +131,5 @@ export default function BookingSection({ lang }: { lang: Lang }) {
     </section>
   );
 }
-
-
-
-
 
 

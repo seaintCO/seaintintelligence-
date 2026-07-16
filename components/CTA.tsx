@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { ArrowUpRight, Plus } from "lucide-react";
-import type { Lang } from "@/app/page";
+import type { Lang } from "@/lib/translations";
 
 const faqEn = [
   {
@@ -139,4 +139,5 @@ export default function CTA({ lang }: { lang: Lang }) {
     </section>
   );
 }
+
 

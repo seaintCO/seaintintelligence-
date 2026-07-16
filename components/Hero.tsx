@@ -1,6 +1,6 @@
 ﻿import { ArrowUpRight, Sparkles } from "lucide-react";
 import Dashboard from "./Dashboard";
-import type { Lang } from "@/app/page";
+import type { Lang } from "@/lib/translations";
 
 export default function Hero({ lang }: { lang: Lang }) {
   const es = lang === "es";
@@ -46,5 +46,6 @@ export default function Hero({ lang }: { lang: Lang }) {
     </div>
   );
 }
+
 
 

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
@@ -23,14 +23,14 @@ export default function Home() {
           <div className="pointer-events-none absolute right-5 top-0 hidden h-full w-px bg-slate-200/80 sm:right-9 md:block lg:right-16"></div>
           <Navbar lang={lang} setLang={setLang} />
           <Hero lang={lang} />
-          <Stats />
-          <LogoCloud />
+          <Stats lang={lang} />
+          <LogoCloud lang={lang} />
         </section>
       </main>
-      <Features />
+      <Features lang={lang} />
       <BookingSection lang={lang} />
       <CTA lang={lang} />
-      <Footer />
+      <Footer lang={lang} />
     </>
   );
 }

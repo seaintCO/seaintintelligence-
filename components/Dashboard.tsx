@@ -1,4 +1,4 @@
-﻿import { 
+﻿import {
   BrainCircuit,
   Check,
   FileSearch,
@@ -9,13 +9,10 @@
 } from "lucide-react";
 import type { Lang } from "@/app/page";
 
-type SidebarItem = [string, LucideIcon];
-type MetricItem = [string, string, string, string];
-
 export default function Dashboard({ lang }: { lang: Lang }) {
   const es = lang === "es";
 
-  const sidebar: SidebarItem[] = es
+  const sidebar: [string, LucideIcon][] = es
     ? [
         ["Agentes AI", BrainCircuit],
         ["Reservas", Wallet],
@@ -29,7 +26,7 @@ export default function Dashboard({ lang }: { lang: Lang }) {
         ["Automation", PlugZap],
       ];
 
-  const metrics: MetricItem[] = es
+  const metrics = es
     ? [
         ["Clientes", "1,248", "+18.4%", "text-emerald-600"],
         ["Automatizado", "82%", "Saludable", "text-blue-700"],
@@ -188,8 +185,4 @@ export default function Dashboard({ lang }: { lang: Lang }) {
     </div>
   );
 }
-
-
-
-
 
