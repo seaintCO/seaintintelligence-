@@ -1,8 +1,11 @@
 ﻿"use client";
 
 import Link from "next/link";
-import { Globe2, Menu } from "lucide-react";
-import type { Lang } from "@/lib/translations";
+import { Globe2, Menu, X } from "lucide-react";
+import { useState } from "react";
+import type { Lang } from "@/app/page";
+
+const consultationUrl = "https://calendly.com/seaintco/new-meeting";
 
 export default function Navbar({
   lang,
@@ -11,50 +14,141 @@ export default function Navbar({
   lang: Lang;
   setLang: (lang: Lang) => void;
 }) {
+  const [menuOpen, setMenuOpen] = useState(false);
   const es = lang === "es";
 
+  const navigation = [
+    {
+      href: "#solutions",
+      label: es ? "Soluciones" : "Solutions",
+    },
+    {
+      href: "#process",
+      label: es ? "Proceso" : "Process",
+    },
+    {
+      href: "#features",
+      label: es ? "Funciones" : "Features",
+    },
+    {
+      href: "#company",
+      label: es ? "Compañía" : "Company",
+    },
+  ];
+
+  const closeMenu = () => setMenuOpen(false);
+
   return (
-    <header className="flex items-center justify-between border-b border-slate-200/80 px-4 py-5 sm:px-6 lg:px-16">
-      <Link href="/" className="flex items-center gap-4">
-        <span className="relative h-8 w-8 shrink-0">
-          <span className="absolute left-0 top-0 h-2.5 w-2.5 rounded bg-blue-700" />
-          <span className="absolute right-0 top-0 h-2.5 w-2.5 rounded bg-blue-700" />
-          <span className="absolute left-1/2 top-1/2 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded bg-blue-700" />
-          <span className="absolute bottom-0 left-0 h-2.5 w-2.5 rounded bg-blue-700" />
-          <span className="absolute bottom-0 right-0 h-2.5 w-2.5 rounded bg-blue-700" />
-        </span>
-        <span className="text-lg font-semibold tracking-[-0.04em] text-black sm:text-3xl">
-          SEAINT Intelligence
-        </span>
-      </Link>
+    <header className="relative z-50 border-b border-slate-200/80">
+      <div className="flex items-center justify-between px-4 py-5 sm:px-6 lg:px-16">
+        <Link href="/" className="flex items-center gap-4" onClick={closeMenu}>
+          <span className="relative h-8 w-8 shrink-0">
+            <span className="absolute left-0 top-0 h-2.5 w-2.5 rounded bg-blue-700" />
+            <span className="absolute right-0 top-0 h-2.5 w-2.5 rounded bg-blue-700" />
+            <span className="absolute left-1/2 top-1/2 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded bg-blue-700" />
+            <span className="absolute bottom-0 left-0 h-2.5 w-2.5 rounded bg-blue-700" />
+            <span className="absolute bottom-0 right-0 h-2.5 w-2.5 rounded bg-blue-700" />
+          </span>
 
-      <nav className="hidden items-center gap-10 text-sm font-medium text-slate-950 xl:flex">
-        <Link href="#solutions" className="transition hover:text-blue-700">{es ? "Soluciones" : "Solutions"}</Link>
-        <Link href="#process" className="transition hover:text-blue-700">{es ? "Proceso" : "Process"}</Link>
-        <Link href="#features" className="transition hover:text-blue-700">{es ? "Funciones" : "Features"}</Link>
-        <Link href="#company" className="transition hover:text-blue-700">{es ? "Compañía" : "Company"}</Link>
-      </nav>
-
-      <div className="flex items-center gap-3">
-        <button
-          onClick={() => setLang(es ? "en" : "es")}
-          className="group inline-flex h-12 items-center gap-2 rounded-[16px] border border-blue-200/70 bg-white/60 px-4 text-sm font-semibold text-[#06145b] shadow-[0_12px_34px_rgba(37,99,235,0.10),inset_0_1px_0_rgba(255,255,255,0.95)] backdrop-blur-xl transition hover:-translate-y-0.5 hover:border-blue-300 hover:shadow-[0_18px_50px_rgba(37,99,235,0.22)]"
-        >
-          <Globe2 className="h-4 w-4 text-blue-700" />
-          {es ? "EN" : "ES"}
-        </button>
-
-        <Link href="https://calendly.com/seaintco/new-meeting" className="group hidden h-12 items-center justify-center overflow-hidden rounded-[16px] bg-gradient-to-br from-[#2f6bff] via-[#2454f4] to-[#1237d8] px-5 text-[15px] font-semibold tracking-[-0.02em] text-white shadow-[0_18px_48px_rgba(37,84,244,0.38),0_0_40px_rgba(37,84,244,0.18),inset_0_1px_0_rgba(255,255,255,0.42)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_24px_60px_rgba(37,84,244,0.50),0_0_60px_rgba(37,84,244,0.25),inset_0_1px_0_rgba(255,255,255,0.50)] sm:inline-flex">
-          {es ? "Reservar" : "Book Now"}
+          <span className="text-lg font-semibold tracking-[-0.04em] text-black sm:text-3xl">
+            SEAINT Intelligence
+          </span>
         </Link>
 
-        <button className="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-950 shadow-sm xl:hidden">
-          <Menu className="h-5 w-5" />
-        </button>
+        <nav
+          aria-label={es ? "Navegación principal" : "Primary navigation"}
+          className="hidden items-center gap-10 text-sm font-medium text-slate-950 xl:flex"
+        >
+          {navigation.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="transition hover:text-blue-700"
+            >
+              {item.label}
+            </Link>
+          ))}
+        </nav>
+
+        <div className="flex items-center gap-3">
+          <button
+            type="button"
+            onClick={() => setLang(es ? "en" : "es")}
+            aria-label={
+              es ? "Cambiar idioma a inglés" : "Change language to Spanish"
+            }
+            className="group inline-flex h-12 items-center gap-2 rounded-[16px] border border-blue-200/70 bg-white/60 px-4 text-sm font-semibold text-[#06145b] shadow-[0_12px_34px_rgba(37,99,235,0.10),inset_0_1px_0_rgba(255,255,255,0.95)] backdrop-blur-xl transition hover:-translate-y-0.5 hover:border-blue-300 hover:shadow-[0_18px_50px_rgba(37,99,235,0.22)]"
+          >
+            <Globe2 className="h-4 w-4 text-blue-700" />
+            {es ? "EN" : "ES"}
+          </button>
+
+          <Link
+            href={consultationUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="group hidden h-12 items-center justify-center overflow-hidden rounded-[16px] bg-gradient-to-br from-[#2f6bff] via-[#2454f4] to-[#1237d8] px-5 text-[15px] font-semibold tracking-[-0.02em] text-white shadow-[0_18px_48px_rgba(37,84,244,0.38),0_0_40px_rgba(37,84,244,0.18),inset_0_1px_0_rgba(255,255,255,0.42)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_24px_60px_rgba(37,84,244,0.50),0_0_60px_rgba(37,84,244,0.25),inset_0_1px_0_rgba(255,255,255,0.50)] sm:inline-flex"
+          >
+            {es ? "Reservar consulta" : "Book consultation"}
+          </Link>
+
+          <button
+            type="button"
+            onClick={() => setMenuOpen((current) => !current)}
+            aria-expanded={menuOpen}
+            aria-controls="mobile-navigation"
+            aria-label={
+              menuOpen
+                ? es
+                  ? "Cerrar menú"
+                  : "Close menu"
+                : es
+                  ? "Abrir menú"
+                  : "Open menu"
+            }
+            className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-950 shadow-sm transition hover:border-blue-200 hover:text-blue-700 xl:hidden"
+          >
+            {menuOpen ? (
+              <X className="h-5 w-5" />
+            ) : (
+              <Menu className="h-5 w-5" />
+            )}
+          </button>
+        </div>
       </div>
+
+      {menuOpen && (
+        <div
+          id="mobile-navigation"
+          className="absolute left-0 right-0 top-full border-b border-slate-200 bg-white/95 px-5 py-5 shadow-[0_24px_60px_rgba(15,23,42,0.12)] backdrop-blur-2xl xl:hidden"
+        >
+          <nav
+            aria-label={es ? "Navegación móvil" : "Mobile navigation"}
+            className="mx-auto flex max-w-[1500px] flex-col gap-2"
+          >
+            {navigation.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                onClick={closeMenu}
+                className="rounded-2xl border border-transparent px-5 py-4 text-base font-semibold text-slate-800 transition hover:border-blue-100 hover:bg-blue-50 hover:text-blue-700"
+              >
+                {item.label}
+              </Link>
+            ))}
+
+            <Link
+              href={consultationUrl}
+              target="_blank"
+              rel="noreferrer"
+              onClick={closeMenu}
+              className="mt-3 inline-flex min-h-14 items-center justify-center rounded-2xl bg-gradient-to-br from-[#2f6bff] via-[#2454f4] to-[#1237d8] px-6 text-center font-semibold text-white shadow-[0_18px_48px_rgba(37,84,244,0.30)]"
+            >
+              {es ? "Reservar una consulta" : "Book a consultation"}
+            </Link>
+          </nav>
+        </div>
+      )}
     </header>
   );
 }
-
-
-
