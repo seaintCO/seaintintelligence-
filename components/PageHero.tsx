@@ -40,7 +40,7 @@ export default function PageHero({
               {es ? eyebrow.es : eyebrow.en}
             </p>
 
-            <h1 className="mt-7 text-5xl font-semibold leading-[0.98] tracking-[-0.06em] text-slate-950 sm:text-6xl lg:text-7xl">
+            <h1 className="mt-7 text-5xl font-semibold leading-[0.98] tracking-[-0.06em] text-slate-950 sm:text-6xl lg:text-7xl enterprise-page-headline">
               {es ? title.es : title.en}{" "}
               <span className="text-blue-700">
                 {es ? highlight.es : highlight.en}
@@ -53,11 +53,11 @@ export default function PageHero({
 
             <a
               href="/consultation"
-              className="holo-primary mt-10 inline-flex h-14 items-center justify-center rounded-[18px] pl-7 pr-3 font-semibold text-white"
+              className="seaint-btn seaint-btn-primary page-hero-primary-button"
             >
               <span>{es ? "Reservar consulta" : "Book consultation"}</span>
 
-              <span className="ml-4 inline-flex h-11 w-11 items-center justify-center rounded-[14px] border border-white/20 bg-white/20">
+              <span className="seaint-btn-icon">
                 <ArrowUpRight className="h-5 w-5" />
               </span>
             </a>
@@ -67,3 +67,4 @@ export default function PageHero({
     </section>
   );
 }
+

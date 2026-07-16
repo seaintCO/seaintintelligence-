@@ -646,3 +646,183 @@ h6 {
     display: none;
   }
 }
+
+/* =========================================================
+   SEAINT FINAL HEADLINE + BUTTON CONSISTENCY FIX
+   ========================================================= */
+
+/* Homepage headline:
+   one line, centered, non-italic, never clipped */
+.systems-tomorrow-headline {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  overflow: visible;
+
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 2px;
+  padding-left: 2px;
+
+  font-family:
+    "Arial Black",
+    "Helvetica Neue",
+    Arial,
+    sans-serif !important;
+
+  font-size: clamp(1.75rem, 7.7vw, 5.75rem) !important;
+  font-style: normal !important;
+  font-weight: 800 !important;
+  line-height: 1 !important;
+  letter-spacing: -0.065em !important;
+
+  text-align: center !important;
+  white-space: nowrap !important;
+
+  opacity: 1 !important;
+  filter: none !important;
+  transform: none !important;
+}
+
+/* Prevent child spans from restoring serif or italic styles */
+.systems-tomorrow-headline,
+.systems-tomorrow-headline span,
+.systems-tomorrow-headline em,
+.systems-tomorrow-headline strong {
+  font-family:
+    "Arial Black",
+    "Helvetica Neue",
+    Arial,
+    sans-serif !important;
+
+  font-style: normal !important;
+  font-weight: 800 !important;
+  line-height: inherit !important;
+}
+
+/* Inner-page headings now match the clean SaaS homepage direction */
+.enterprise-page-headline,
+.enterprise-page-headline *,
+.enterprise-page-headline span,
+.enterprise-page-headline em,
+.enterprise-page-headline strong {
+  font-family:
+    "Arial Black",
+    "Helvetica Neue",
+    Arial,
+    sans-serif !important;
+
+  font-style: normal !important;
+  font-weight: 800 !important;
+  line-height: 0.98 !important;
+  letter-spacing: -0.065em !important;
+}
+
+.enterprise-page-headline {
+  max-width: 980px;
+  text-wrap: balance;
+}
+
+/* Remove accidental italic styling from highlighted words */
+.enterprise-page-headline .italic,
+.systems-tomorrow-headline .italic {
+  font-style: normal !important;
+}
+
+/* Make home and inner-page primary buttons identical */
+.hero-primary-button,
+.page-hero-primary-button {
+  width: 100%;
+
+  border: 1px solid rgba(255, 255, 255, 0.28) !important;
+
+  background:
+    radial-gradient(
+      circle at 22% 0%,
+      rgba(255, 255, 255, 0.48),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #5d8cff 0%,
+      #3268ff 28%,
+      #2454f4 58%,
+      #173ac6 100%
+    ) !important;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.66),
+    inset 0 -1px 0 rgba(0, 20, 120, 0.22),
+    inset 0 -13px 25px rgba(0, 34, 160, 0.14),
+    0 14px 30px rgba(37, 84, 244, 0.22),
+    0 27px 68px rgba(37, 84, 244, 0.36),
+    0 0 55px rgba(72, 118, 255, 0.2) !important;
+}
+
+.hero-primary-button:hover,
+.page-hero-primary-button:hover {
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.78),
+    inset 0 -1px 0 rgba(0, 20, 120, 0.2),
+    inset 0 -15px 30px rgba(0, 34, 160, 0.12),
+    0 16px 34px rgba(37, 84, 244, 0.26),
+    0 34px 86px rgba(37, 84, 244, 0.44),
+    0 0 76px rgba(72, 118, 255, 0.28) !important;
+}
+
+/* Secondary homepage button alignment */
+.hero-secondary-button {
+  width: 100%;
+}
+
+/* Keep icons centered and consistent */
+.hero-primary-button .seaint-btn-icon,
+.hero-secondary-button .seaint-btn-icon,
+.page-hero-primary-button .seaint-btn-icon {
+  margin-left: auto;
+}
+
+/* Mobile corrections */
+@media (max-width: 639px) {
+  .systems-tomorrow-headline {
+    font-size: clamp(1.72rem, 7.55vw, 2.35rem) !important;
+    letter-spacing: -0.072em !important;
+  }
+
+  .enterprise-page-headline {
+    font-size: clamp(2.45rem, 12vw, 4.3rem) !important;
+    line-height: 0.97 !important;
+    letter-spacing: -0.07em !important;
+  }
+
+  .hero-primary-button,
+  .hero-secondary-button {
+    min-height: 70px !important;
+  }
+
+  .page-hero-primary-button {
+    width: 100%;
+    max-width: 420px;
+    min-height: 66px !important;
+  }
+
+  .hero-primary-button .seaint-btn-icon,
+  .hero-secondary-button .seaint-btn-icon,
+  .page-hero-primary-button .seaint-btn-icon {
+    height: 52px;
+    width: 52px;
+    margin-left: auto;
+  }
+}
+
+/* Desktop homepage alignment */
+@media (min-width: 1024px) {
+  .systems-tomorrow-headline {
+    font-size: clamp(3rem, 4.7vw, 5.75rem) !important;
+    text-align: left !important;
+  }
+
+  .page-hero-primary-button {
+    width: fit-content;
+  }
+}
