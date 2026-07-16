@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { ArrowRight } from "lucide-react";
 import type { Lang } from "@/app/page";
@@ -11,10 +11,10 @@ const featuresEn = [
 ];
 
 const featuresEs = [
-  { title: "Automatización inteligente", text: "La IA gestiona prospectos, reservas, seguimiento y trabajo repetitivo para que los equipos avancen más rápido.", badge: "Flujo automático", metric: "94%", dark: false },
+  { title: "AutomatizaciÃ³n inteligente", text: "La IA gestiona prospectos, reservas, seguimiento y trabajo repetitivo para que los equipos avancen mÃ¡s rÃ¡pido.", badge: "Flujo automÃ¡tico", metric: "94%", dark: false },
   { title: "Sistemas seguros", text: "Sistemas empresariales con controles para sitios web, automatizaciones, agentes y dashboards.", badge: "Verificado", metric: "Seguro", dark: true },
   { title: "Empleados de IA", text: "Implementa recepcionistas de IA, agentes de chat, calificadores de prospectos y asistentes de soporte.", badge: "24/7", metric: "Activo", dark: false },
-  { title: "Plataformas empresariales", text: "Sitios web, portales, dashboards, CRM, reservas y analítica integrados en un solo sistema.", badge: "Activo", metric: "+38%", dark: true },
+  { title: "Plataformas empresariales", text: "Sitios web, portales, dashboards, CRM, reservas y analÃ­tica integrados en un solo sistema.", badge: "Activo", metric: "+38%", dark: true },
 ];
 
 export default function Features({ lang }: { lang: Lang }) {
@@ -38,7 +38,7 @@ export default function Features({ lang }: { lang: Lang }) {
 
             <p className="max-w-[430px] text-base leading-7 text-slate-500 md:justify-self-end">
               {es
-                ? "Inteligencia artificial, automatización, software y sistemas web que trabajan juntos para que las empresas operen mejor."
+                ? "Inteligencia artificial, automatizaciÃ³n, software y sistemas web que trabajan juntos para que las empresas operen mejor."
                 : "Powerful AI, automation, software, and web systems that work together to help businesses operate smarter."}
             </p>
           </div>
@@ -136,3 +136,4 @@ export default function Features({ lang }: { lang: Lang }) {
     </section>
   );
 }
+

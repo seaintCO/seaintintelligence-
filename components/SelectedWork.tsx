@@ -202,7 +202,7 @@ export default function SelectedWork({ lang }: { lang: Lang }) {
 
             <Link
               href="/consultation"
-              className="seaint-btn seaint-btn-primary inline-flex min-h-14 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 via-blue-600 to-blue-800 px-7 text-sm font-semibold text-white shadow-[0_20px_50px_rgba(37,99,235,0.32)] transition hover:-translate-y-1 hover:shadow-[0_28px_65px_rgba(37,99,235,0.42)]"
+              className="btn-spotlight btn-spotlight-primary inline-flex min-h-14 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 via-blue-600 to-blue-800 px-7 text-sm font-semibold text-white shadow-[0_20px_50px_rgba(37,99,235,0.32)] transition hover:-translate-y-1 hover:shadow-[0_28px_65px_rgba(37,99,235,0.42)]"
             >
               {es ? "Hablar sobre un proyecto" : "Discuss a project"}
               <ArrowUpRight className="ml-3 h-4 w-4" />
@@ -213,4 +213,5 @@ export default function SelectedWork({ lang }: { lang: Lang }) {
     </section>
   );
 }
+
 

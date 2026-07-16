@@ -1,6 +1,8 @@
 ﻿import type { Metadata } from "next";
 import "./globals.css";
+import { LanguageProvider } from "@/components/LanguageProvider";
 import "@/styles/aura.css";
+import SpotlightEffects from "@/components/SpotlightEffects";
 
 const siteUrl = "https://seaintintelligence.com";
 
@@ -81,8 +83,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="min-h-screen bg-white text-slate-950 antialiased">
-        {children}
+        <LanguageProvider>{children}</LanguageProvider>
+              <SpotlightEffects />
       </body>
     </html>
   );
 }
+
+
+

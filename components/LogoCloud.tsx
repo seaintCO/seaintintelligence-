@@ -1,4 +1,4 @@
-import type { Lang } from "@/app/page";
+﻿import type { Lang } from "@/app/page";
 
 const items = ["ALMA", "Leadly", "Nocturai", "Alta Sports", "Purity of Hearts", "Founders Club", "SEAINT Enterprise"];
 
@@ -21,3 +21,4 @@ export default function LogoCloud({ lang }: { lang: Lang }) {
     </section>
   );
 }
+

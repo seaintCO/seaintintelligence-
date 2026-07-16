@@ -53,11 +53,11 @@ export default function PageHero({
 
             <a
               href="/consultation"
-              className="seaint-btn seaint-btn-primary page-hero-primary-button"
+              className="btn-spotlight btn-spotlight-primary page-hero-primary-button"
             >
               <span>{es ? "Reservar consulta" : "Book consultation"}</span>
 
-              <span className="seaint-btn-icon">
+              <span className="spotlight-button-icon">
                 <ArrowUpRight className="h-5 w-5" />
               </span>
             </a>
@@ -67,4 +67,5 @@ export default function PageHero({
     </section>
   );
 }
+
 

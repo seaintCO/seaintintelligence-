@@ -93,7 +93,7 @@ export default function CTA({ lang }: { lang: Lang }) {
                   ? "Habla con nuestro equipo sobre tu negocio, tus herramientas actuales y el sistema que quieres construir."
                   : "Talk to our team about your business, current tools, and the system you want to build."}
               </p>
-              <a href="https://calendly.com/seaintco/new-meeting" className="seaint-btn seaint-btn-primary mt-8 inline-flex h-14 items-center justify-center rounded-[18px] pl-7 pr-3 font-semibold text-white">
+              <a href="https://calendly.com/seaintco/new-meeting" className="btn-spotlight btn-spotlight-primary mt-8 inline-flex h-14 items-center justify-center rounded-[18px] pl-7 pr-3 font-semibold text-white">
                 <span>{es ? "Reservar llamada" : "Book a call"}</span>
                 <span className="ml-4 inline-flex h-11 w-11 items-center justify-center rounded-[14px] border border-white/20 bg-white/20">
                   <ArrowUpRight className="h-5 w-5" />
@@ -139,6 +139,7 @@ export default function CTA({ lang }: { lang: Lang }) {
     </section>
   );
 }
+
 
 
 

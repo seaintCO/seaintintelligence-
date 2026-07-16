@@ -75,7 +75,7 @@ export default function CompanySection({ lang }: { lang: Lang }) {
 
               <a
                 href="/consultation"
-                className="holo-primary mt-9 inline-flex h-14 items-center justify-center rounded-[18px] pl-7 pr-3 font-semibold text-white"
+                className="btn-spotlight btn-spotlight-primary mt-9 inline-flex h-14 items-center justify-center rounded-[18px] pl-7 pr-3 font-semibold text-white"
               >
                 <span>{es ? "Hablar con SEAINT" : "Talk with SEAINT"}</span>
 
@@ -129,3 +129,4 @@ export default function CompanySection({ lang }: { lang: Lang }) {
     </section>
   );
 }
+

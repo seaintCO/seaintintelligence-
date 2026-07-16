@@ -121,3 +121,4 @@ export default function ProcessSection({ lang }: { lang: Lang }) {
     </section>
   );
 }
+

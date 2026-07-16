@@ -21,11 +21,11 @@ export default function Hero({ lang }: { lang: Lang }) {
           <div className="hero-action-row mt-8 flex w-full flex-col gap-3 sm:flex-row">
             <Link
               href="/consultation"
-              className="premium-button inline-flex min-h-16 flex-1 items-center justify-center rounded-[20px] bg-gradient-to-br from-[#477bff] via-[#2558f4] to-[#173ac6] px-6 text-lg font-semibold text-white shadow-[0_22px_55px_rgba(37,84,244,0.36),inset_0_1px_0_rgba(255,255,255,0.42)] transition duration-300 hover:-translate-y-1"
+              className="btn-spotlight btn-spotlight-primary inline-flex min-h-16 flex-1 items-center justify-center rounded-[20px] bg-gradient-to-br from-[#477bff] via-[#2558f4] to-[#173ac6] px-6 text-lg font-semibold text-white shadow-[0_22px_55px_rgba(37,84,244,0.36),inset_0_1px_0_rgba(255,255,255,0.42)] transition duration-300 hover:-translate-y-1"
             >
               <span>{es ? "Reservar ahora" : "Book Now"}</span>
 
-              <span className="seaint-btn-icon hero-cta-icon">
+              <span className="spotlight-button-icon hero-cta-icon">
                 <ArrowUpRight className="h-5 w-5" />
               </span>
             </Link>
@@ -36,7 +36,7 @@ export default function Hero({ lang }: { lang: Lang }) {
             >
               <span>{es ? "Explorar soluciones" : "Explore Solutions"}</span>
 
-              <span className="seaint-btn-icon hero-cta-icon">
+              <span className="spotlight-button-icon hero-cta-icon">
                 <ArrowUpRight className="h-5 w-5" />
               </span>
             </Link>
@@ -50,6 +50,7 @@ export default function Hero({ lang }: { lang: Lang }) {
     </section>
   );
 }
+
 
 
 

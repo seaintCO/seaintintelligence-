@@ -1,4 +1,4 @@
-import { ArrowRight, Landmark, Wallet, Workflow } from "lucide-react";
+﻿import { ArrowRight, Landmark, Wallet, Workflow } from "lucide-react";
 import type { Lang } from "@/app/page";
 
 export default function Stats({ lang }: { lang: Lang }) {
@@ -6,8 +6,8 @@ export default function Stats({ lang }: { lang: Lang }) {
   const stats = es
     ? [
         { icon: Workflow, title: "Sistemas empresariales con IA", text: "La IA gestiona prospectos, llamadas, reservas, seguimiento y flujos de clientes." },
-        { icon: Wallet, title: "Implementación rápida", text: "Lanza sitios web, dashboards, agentes y automatizaciones sin procesos lentos de agencia." },
-        { icon: Landmark, title: "Inteligencia de ingresos", text: "Controla prospectos, reservas, analítica y actividad del cliente desde un solo sistema." },
+        { icon: Wallet, title: "ImplementaciÃ³n rÃ¡pida", text: "Lanza sitios web, dashboards, agentes y automatizaciones sin procesos lentos de agencia." },
+        { icon: Landmark, title: "Inteligencia de ingresos", text: "Controla prospectos, reservas, analÃ­tica y actividad del cliente desde un solo sistema." },
       ]
     : [
         { icon: Workflow, title: "AI business systems", text: "AI handles leads, calls, booking, follow-up, and customer workflows." },
@@ -39,3 +39,4 @@ export default function Stats({ lang }: { lang: Lang }) {
     </div>
   );
 }
+
