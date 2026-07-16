@@ -18,7 +18,7 @@ export default function Hero({ lang }: { lang: Lang }) {
             {es ? "Sistemas del Mañana" : "Systems of Tomorrow"}
           </h1>
 
-          <div className="mt-10 flex w-full max-w-[620px] flex-col gap-4 sm:flex-row lg:max-w-none">
+          <div className="hero-action-row mt-10 flex w-full flex-col gap-3 sm:flex-row">
             <Link
               href="/consultation"
               className="premium-button inline-flex min-h-16 flex-1 items-center justify-center rounded-[20px] bg-gradient-to-br from-[#477bff] via-[#2558f4] to-[#173ac6] px-6 text-lg font-semibold text-white shadow-[0_22px_55px_rgba(37,84,244,0.36),inset_0_1px_0_rgba(255,255,255,0.42)] transition duration-300 hover:-translate-y-1"
@@ -50,5 +50,6 @@ export default function Hero({ lang }: { lang: Lang }) {
     </section>
   );
 }
+
 
 
