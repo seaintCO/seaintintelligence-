@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
@@ -6,6 +6,7 @@ import Hero from "@/components/Hero";
 import Stats from "@/components/Stats";
 import LogoCloud from "@/components/LogoCloud";
 import Features from "@/components/Features";
+import SelectedWork from "@/components/SelectedWork";
 import BookingSection from "@/components/BookingSection";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
@@ -28,11 +29,13 @@ export default function Home() {
         </section>
       </main>
       <Features lang={lang} />
+      <SelectedWork lang={lang} />
       <BookingSection lang={lang} />
       <CTA lang={lang} />
       <Footer lang={lang} />
     </>
   );
 }
+
 
 
