@@ -1,1 +1,136 @@
 ﻿@import "tailwindcss";
+
+/* =========================================================
+   SEAINT PREMIUM TYPOGRAPHY + MOTION
+   ========================================================= */
+
+:root {
+  --seaint-ink: #07111f;
+  --seaint-muted: #667085;
+  --seaint-blue: #2457f5;
+  --seaint-line: rgba(148, 163, 184, 0.28);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+}
+
+h1,
+h2,
+.display-serif {
+  font-family:
+    "Iowan Old Style",
+    "Palatino Linotype",
+    "Book Antiqua",
+    Palatino,
+    Georgia,
+    serif;
+  font-weight: 500;
+  letter-spacing: -0.055em;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: -0.035em;
+}
+
+::selection {
+  background: rgba(37, 87, 245, 0.18);
+  color: #07111f;
+}
+
+.premium-surface {
+  border: 1px solid rgba(255, 255, 255, 0.82);
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.88),
+      rgba(248, 250, 252, 0.64)
+    );
+  box-shadow:
+    0 30px 90px rgba(15, 23, 42, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(24px);
+}
+
+.premium-hover {
+  transition:
+    transform 350ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 350ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 350ms ease;
+}
+
+.premium-hover:hover {
+  transform: translateY(-5px);
+  border-color: rgba(96, 165, 250, 0.5);
+  box-shadow:
+    0 34px 90px rgba(37, 99, 235, 0.13),
+    inset 0 1px 0 rgba(255, 255, 255, 1);
+}
+
+.premium-button {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.premium-button::before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  content: "";
+  background:
+    linear-gradient(
+      110deg,
+      transparent 10%,
+      rgba(255, 255, 255, 0.22) 45%,
+      transparent 75%
+    );
+  transform: translateX(-130%);
+  transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.premium-button:hover::before {
+  transform: translateX(130%);
+}
+
+.reveal-soft {
+  animation: seaintReveal 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes seaintReveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+    filter: blur(5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal-soft {
+    animation: none;
+  }
+
+  .premium-hover,
+  .premium-button::before {
+    transition: none;
+  }
+}
