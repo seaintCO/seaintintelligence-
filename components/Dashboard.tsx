@@ -1,18 +1,21 @@
-﻿import {
+﻿import { 
   BrainCircuit,
-  CalendarDays,
   Check,
   FileSearch,
   PlugZap,
   Radar,
   Wallet,
+  type LucideIcon,
 } from "lucide-react";
 import type { Lang } from "@/app/page";
+
+type SidebarItem = [string, LucideIcon];
+type MetricItem = [string, string, string, string];
 
 export default function Dashboard({ lang }: { lang: Lang }) {
   const es = lang === "es";
 
-  const sidebar = es
+  const sidebar: SidebarItem[] = es
     ? [
         ["Agentes AI", BrainCircuit],
         ["Reservas", Wallet],
@@ -26,7 +29,7 @@ export default function Dashboard({ lang }: { lang: Lang }) {
         ["Automation", PlugZap],
       ];
 
-  const metrics = es
+  const metrics: MetricItem[] = es
     ? [
         ["Clientes", "1,248", "+18.4%", "text-emerald-600"],
         ["Automatizado", "82%", "Saludable", "text-blue-700"],
@@ -65,7 +68,7 @@ export default function Dashboard({ lang }: { lang: Lang }) {
         <div className="grid lg:grid-cols-[180px_1fr]">
           <aside className="hidden border-r border-white/60 bg-white/25 p-4 backdrop-blur-xl lg:block">
             <div className="space-y-2 text-xs font-semibold text-slate-500">
-              {sidebar.map(([label, Icon]: any, index) => (
+              {sidebar.map(([label, Icon], index) => (
                 <button
                   key={label}
                   className={`flex w-full items-center gap-2 rounded-xl border px-3 py-2 transition hover:-translate-y-0.5 hover:bg-white/70 hover:shadow-[0_12px_28px_rgba(37,99,235,0.10)] ${
@@ -185,4 +188,8 @@ export default function Dashboard({ lang }: { lang: Lang }) {
     </div>
   );
 }
+
+
+
+
 

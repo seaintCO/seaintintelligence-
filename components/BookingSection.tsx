@@ -1,4 +1,4 @@
-﻿import {
+﻿import { 
   ArrowUpRight,
   Banknote,
   CalendarDays,
@@ -6,6 +6,7 @@
   Shield,
   Tag,
   UserRound,
+  type LucideIcon,
 } from "lucide-react";
 import type { Lang } from "@/app/page";
 
@@ -75,11 +76,11 @@ export default function BookingSection({ lang }: { lang: Lang }) {
               </div>
 
               <div className="mt-10 grid gap-3 sm:grid-cols-3">
-                {[
+                {([
                   [Shield, es ? "Sistemas seguros" : "Secure systems"],
                   [Monitor, es ? "Monitoreo 24/7" : "24/7 monitoring"],
                   [Tag, es ? "Sin tarifas ocultas" : "No hidden fees"],
-                ].map(([Icon, label]: any) => (
+                ] satisfies [LucideIcon, string][]).map(([Icon, label]) => (
                   <div
                     key={label}
                     className="inline-flex items-center justify-center gap-3 border border-slate-200 bg-white/70 px-5 py-4 text-slate-500 shadow-[0_10px_30px_rgba(15,23,42,0.04)] backdrop-blur-xl"
@@ -109,12 +110,12 @@ export default function BookingSection({ lang }: { lang: Lang }) {
                 </span>
               </div>
 
-              {[
+              {([
                 [Banknote, "top-[15%] left-1/2 -translate-x-1/2"],
                 [Shield, "left-[8%] top-1/2 -translate-y-1/2"],
                 [CalendarDays, "right-[8%] top-1/2 -translate-y-1/2"],
                 [UserRound, "bottom-[13%] left-1/2 -translate-x-1/2"],
-              ].map(([Icon, pos]: any, index) => (
+              ] satisfies [LucideIcon, string][]).map(([Icon, pos], index) => (
                 <div
                   key={index}
                   className={`absolute ${pos} anim-float flex h-16 w-16 items-center justify-center rounded-2xl border border-slate-200 bg-white/80 text-blue-700 shadow-[0_18px_46px_rgba(15,23,42,0.09)] backdrop-blur-xl`}
@@ -130,5 +131,9 @@ export default function BookingSection({ lang }: { lang: Lang }) {
     </section>
   );
 }
+
+
+
+
 
 

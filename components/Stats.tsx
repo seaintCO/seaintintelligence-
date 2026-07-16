@@ -1,4 +1,4 @@
-﻿import { ArrowRight, Bot, Globe2, Landmark, Wallet, Workflow } from "lucide-react";
+﻿import { ArrowRight, Landmark, Wallet, Workflow } from "lucide-react";
 
 const stats = [
   {
@@ -43,4 +43,5 @@ export default function Stats() {
     </div>
   );
 }
+
 
