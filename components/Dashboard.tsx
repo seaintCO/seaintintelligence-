@@ -7,7 +7,6 @@ import {
   Check,
   Globe2,
   Layers3,
-  MessageSquareText,
   MousePointerClick,
   PlugZap,
   Sparkles,
@@ -364,3 +363,4 @@ export default function Dashboard({ lang }: { lang: Lang }) {
     </div>
   );
 }
+
