@@ -15,7 +15,7 @@ export default function Hero({ lang }: { lang: Lang }) {
           {es ? "Software AI y Sistemas Empresariales" : "AI Software & Business Systems"}
         </div>
 
-        <h1 className="max-w-[760px] text-[2.55rem] font-semibold leading-[1.03] tracking-[-0.065em] text-black sm:text-6xl lg:text-[4.55rem] xl:text-[5.05rem]">
+        <h1 className="max-w-[760px] text-[2.55rem] font-semibold leading-[1.03] tracking-[-0.065em] text-black sm:text-6xl lg:text-[4.55rem] xl:text-[5.05rem] headline-shimmer">
           {es ? "Sistemas inteligentes para negocios modernos." : "Intelligent systems for modern businesses."}
         </h1>
 
@@ -46,6 +46,7 @@ export default function Hero({ lang }: { lang: Lang }) {
     </div>
   );
 }
+
 
 
 

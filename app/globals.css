@@ -134,3 +134,47 @@ h6 {
     transition: none;
   }
 }
+
+/* =========================================================
+   SEAINT HOMEPAGE HEADLINE SHIMMER
+   ========================================================= */
+
+@keyframes seaintHeadlineShimmer {
+  0%,
+  100% {
+    background-position: 200% 0;
+  }
+
+  50% {
+    background-position: 0 0;
+  }
+}
+
+.headline-shimmer,
+.headline-shimmer * {
+  background-image: linear-gradient(
+    90deg,
+    #07111f 0%,
+    #07111f 36%,
+    #2563eb 48%,
+    #4f7cff 52%,
+    #07111f 64%,
+    #07111f 100%
+  );
+  background-size: 220% 100%;
+  background-position: 200% 0;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: seaintHeadlineShimmer 4.5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .headline-shimmer,
+  .headline-shimmer * {
+    animation: none;
+    background-position: 50% 0;
+  }
+}
