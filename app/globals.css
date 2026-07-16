@@ -987,3 +987,263 @@ h6 {
     height: 34px !important;
   }
 }
+
+
+/* =========================================================
+   SEAINT TRANSLUCENT GLASS HERO BUTTONS
+   ========================================================= */
+
+.hero-cta {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  min-height: 50px !important;
+  padding: 0 13px 0 17px !important;
+  border-radius: 16px !important;
+
+  font-size: 0.86rem !important;
+  font-weight: 650 !important;
+  letter-spacing: -0.02em !important;
+
+  -webkit-backdrop-filter: blur(24px) saturate(140%);
+  backdrop-filter: blur(24px) saturate(140%);
+
+  transition:
+    transform 280ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 280ms ease,
+    background 280ms ease,
+    box-shadow 280ms ease !important;
+}
+
+.hero-cta::before {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  content: "";
+
+  opacity: 1 !important;
+  border-radius: inherit;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.32),
+      rgba(255, 255, 255, 0.08)
+    ) !important;
+
+  filter: none !important;
+}
+
+.hero-cta::after {
+  position: absolute;
+  top: -50%;
+  left: -35%;
+  z-index: -1;
+
+  width: 28%;
+  height: 200%;
+  content: "";
+
+  opacity: 0.25;
+  background:
+    linear-gradient(
+      110deg,
+      transparent,
+      rgba(255, 255, 255, 0.6),
+      transparent
+    );
+
+  transform: rotate(16deg) translateX(-180%);
+  transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.hero-cta:hover::after {
+  transform: rotate(16deg) translateX(520%);
+}
+
+/* Primary glass */
+
+.hero-glass-primary {
+  color: #ffffff !important;
+
+  border: 1px solid rgba(255, 255, 255, 0.34) !important;
+
+  background:
+    radial-gradient(
+      circle at 20% 0%,
+      rgba(255, 255, 255, 0.28),
+      transparent 38%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(70, 112, 255, 0.82),
+      rgba(36, 84, 244, 0.78) 55%,
+      rgba(22, 56, 190, 0.82)
+    ) !important;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.48),
+    inset 0 -1px 0 rgba(10, 35, 130, 0.16),
+    0 8px 20px rgba(37, 84, 244, 0.12),
+    0 18px 42px rgba(37, 84, 244, 0.18) !important;
+}
+
+.hero-glass-primary:hover {
+  border-color: rgba(255, 255, 255, 0.5) !important;
+
+  background:
+    radial-gradient(
+      circle at 20% 0%,
+      rgba(255, 255, 255, 0.34),
+      transparent 40%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(79, 121, 255, 0.86),
+      rgba(42, 91, 246, 0.82) 55%,
+      rgba(25, 62, 200, 0.86)
+    ) !important;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.58),
+    0 10px 24px rgba(37, 84, 244, 0.14),
+    0 22px 48px rgba(37, 84, 244, 0.22) !important;
+}
+
+/* Secondary glass */
+
+.hero-glass-secondary {
+  color: #0a1b5c !important;
+
+  border: 1px solid rgba(191, 219, 254, 0.58) !important;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.72),
+      rgba(245, 249, 255, 0.46)
+    ) !important;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.92),
+    inset 0 -1px 0 rgba(148, 163, 184, 0.08),
+    0 8px 20px rgba(15, 23, 42, 0.025),
+    0 16px 34px rgba(37, 99, 235, 0.07) !important;
+}
+
+.hero-glass-secondary:hover {
+  color: #1743c7 !important;
+  border-color: rgba(96, 165, 250, 0.55) !important;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.82),
+      rgba(239, 246, 255, 0.56)
+    ) !important;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 1),
+    0 10px 24px rgba(15, 23, 42, 0.035),
+    0 20px 40px rgba(37, 99, 235, 0.1) !important;
+}
+
+/* Smaller icon treatment */
+
+.hero-cta-icon {
+  width: 34px !important;
+  height: 34px !important;
+  margin-left: auto !important;
+  border-radius: 11px !important;
+
+  background: rgba(255, 255, 255, 0.18) !important;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.28),
+    0 7px 16px rgba(15, 23, 42, 0.06) !important;
+
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+}
+
+.hero-glass-secondary .hero-cta-icon {
+  color: #0a1b5c !important;
+  border-color: rgba(203, 213, 225, 0.62) !important;
+  background: rgba(255, 255, 255, 0.58) !important;
+}
+
+.hero-cta-icon svg {
+  width: 15px !important;
+  height: 15px !important;
+}
+
+/* More restrained movement */
+
+.hero-cta:hover {
+  transform: translateY(-2px) !important;
+}
+
+.hero-cta:active {
+  transform: translateY(0) scale(0.985) !important;
+}
+
+/* Desktop */
+
+@media (min-width: 640px) {
+  .hero-cta {
+    min-width: 176px !important;
+    min-height: 48px !important;
+    font-size: 0.84rem !important;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 639px) {
+  .hero-action-row {
+    max-width: 360px !important;
+    gap: 10px !important;
+  }
+
+  .hero-cta {
+    width: 100% !important;
+    min-height: 48px !important;
+    padding: 0 11px 0 15px !important;
+    border-radius: 15px !important;
+
+    font-size: 0.78rem !important;
+    font-weight: 650 !important;
+  }
+
+  .hero-cta-icon {
+    width: 32px !important;
+    height: 32px !important;
+    border-radius: 10px !important;
+  }
+
+  .hero-cta-icon svg {
+    width: 14px !important;
+    height: 14px !important;
+  }
+
+  .hero-cta:hover {
+    transform: none !important;
+  }
+
+  .hero-cta::after {
+    opacity: 0.18;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero-cta {
+    min-height: 46px !important;
+    font-size: 0.74rem !important;
+  }
+
+  .hero-cta-icon {
+    width: 30px !important;
+    height: 30px !important;
+  }
+}
